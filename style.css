@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+/*font-family: 'Varela Round', sans-serif;*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg--color: rgb(217, 85, 80);
+  --dark-color: rgb(201, 79, 75);
+  --light--color: rgb(224, 99, 95);
+  --font: "Varela Round", sans-serif;
+}
+body {
+  font-family: var(--font);
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+.bgColourTop {
+  background-color: var(--bg--color);
+  min-height: 100vh;
+  grid-column: 1/4;
+  color: white;
+}
+main {
+  display: grid;
+  grid-template-columns: 30% 1fr 30%;
+  padding-top: 2rem;
+}
+button {
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-family: var(--font);
+  cursor: pointer;
+}
+
+/* HEADER */
+header {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  padding-top: 1rem;
+}
+nav {
+  grid-column: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid 1px var(--dark-color);
+  padding-bottom: 1rem;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+.buttons button {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.5rem;
+  background-color: var(--light--color);
+  padding: 0.4rem;
+}
+button .report,
+button .setting,
+button .account {
+  font-size: 0.8rem;
+  padding-right: 0.3rem;
+}
+button img {
+  height: 0.9rem;
+  width: auto;
+  padding-right: 0.5rem;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+.logo img {
+  height: 1.4rem;
+  padding-right: 0.5rem;
+}
+.logo a {
+  color: white;
+}
+/* TIMER SECTION */
+section.timer {
+  grid-column: 2;
+  background-color: var(--light--color);
+  border-radius: 0.5rem;
+  padding-bottom: 2rem;
+}
+section.timer button {
+  background-color: var(--dark-color);
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+.timer {
+  font-size: 6rem;
+}
+
+section.timer button.start {
+  background-color: white;
+  color: var(--bg--color);
+  font-size: 1.3rem;
+  padding: 0.8rem 3.5rem;
+  box-shadow: 1px 5px rgb(231, 231, 231);
+}
+
+section.working,
+section.tasks {
+  grid-column: 2;
+  padding: 1rem;
+}
+section.working h4 {
+  color: rgb(243, 158, 155);
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+section.tasks .taskHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+.taskHeader button {
+  background-color: var(--light--color);
+}
+button.menu {
+  padding: 0.4rem 0.8rem;
+}
+button.menu img {
+  padding: 0;
+}
