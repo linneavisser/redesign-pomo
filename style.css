@@ -69,12 +69,6 @@ nav {
   background-color: var(--light--color);
   padding: 0.4rem;
 }
-button p.report,
-button p.setting,
-button p.account {
-  font-size: 0.8rem;
-  padding-right: 0.3rem;
-}
 button img {
   height: 0.9rem;
   width: auto;
@@ -286,4 +280,24 @@ footer p,
 }
 footer p {
   font-size: 0.7rem;
+}
+
+/* media */
+
+@media screen and (max-width: 890px) {
+  header {
+    grid-template-columns: 5% 1fr 5%;
+  }
+  .timerPage {
+    grid-template-columns: 10% 1fr 10%;
+  }
+  nav button span {
+    display: none;
+  }
+  button img {
+    padding-right: 0;
+  }
+  .textPage {
+    grid-template-columns: 10% 1fr 10%;
+  }
 }
