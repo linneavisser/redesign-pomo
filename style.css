@@ -9,6 +9,8 @@
   --bg--color: rgb(217, 85, 80);
   --dark-color: rgb(201, 79, 75);
   --light--color: rgb(224, 99, 95);
+  --dark-font: rgb(66, 19, 17);
+  --light-font: rgb(56, 34, 33);
   --font: "Varela Round", sans-serif;
   --round-corners: 0.3rem;
 }
@@ -26,6 +28,7 @@ a {
   grid-template-columns: 30% 1fr 30%;
   padding-top: 2rem;
   color: white;
+  padding-bottom: 3rem;
 }
 button {
   border: none;
@@ -148,6 +151,7 @@ section.tasks article {
 }
 .taskList {
   padding-top: 1rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -163,5 +167,50 @@ section.tasks article {
 .taskList article.addTask {
   background-color: var(--dark-color);
   border: 3px dashed var(--light--color);
-  text-align: center;
+  justify-content: center;
+  color: rgb(243, 158, 155);
+}
+.summation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--light--color);
+  border-top: 0.7px solid white;
+  color: rgb(243, 158, 155);
+  padding: 1rem 0 1rem;
+}
+.summation .big {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/****** TEXT PAAAAAGEGEG */
+
+.textPage {
+  display: grid;
+  grid-template-columns: 25% 1fr 25%;
+  text-align: left;
+  padding-top: 3rem;
+}
+.textPage h1,
+.textPage section {
+  grid-column: 2;
+}
+.textPage h1,
+.textPage h2 {
+  color: var(--dark-font);
+  line-height: 2.5rem;
+  padding-bottom: 2rem;
+}
+.textPage h2::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  border-bottom: 4px solid var(--light--color);
+  opacity: 0.8;
+  padding-top: 0.8rem;
+}
+.textPage p {
+  color: var(--light-font);
 }
