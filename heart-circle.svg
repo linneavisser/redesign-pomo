@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8e8e8e;
+      }
+    </style>
+  </defs>
+  <path id="bxs-heart-circle" class="cls-1" d="M18,3A15,15,0,1,0,33,18,15.017,15.017,0,0,0,18,3Zm6.279,16.11L18,25.389,11.721,19.11a4.144,4.144,0,1,1,5.859-5.861l.42.419.419-.419A4.144,4.144,0,1,1,24.28,19.11Z" transform="translate(-3 -3)"/>
+</svg>
