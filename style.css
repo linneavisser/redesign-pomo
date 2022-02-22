@@ -10,6 +10,7 @@
   --dark-color: rgb(201, 79, 75);
   --light--color: rgb(224, 99, 95);
   --font: "Varela Round", sans-serif;
+  --round-corners: 0.3rem;
 }
 body {
   font-family: var(--font);
@@ -18,16 +19,13 @@ body {
 a {
   text-decoration: none;
 }
-.bgColourTop {
+
+.timerPage {
   background-color: var(--bg--color);
-  min-height: 100vh;
-  grid-column: 1/4;
-  color: white;
-}
-main {
   display: grid;
   grid-template-columns: 30% 1fr 30%;
   padding-top: 2rem;
+  color: white;
 }
 button {
   border: none;
@@ -42,6 +40,7 @@ header {
   display: grid;
   grid-template-columns: 20% 1fr 20%;
   padding-top: 1rem;
+  background-color: var(--bg--color);
 }
 nav {
   grid-column: 2;
@@ -62,9 +61,9 @@ nav {
   background-color: var(--light--color);
   padding: 0.4rem;
 }
-button .report,
-button .setting,
-button .account {
+button p.report,
+button p.setting,
+button p.account {
   font-size: 0.8rem;
   padding-right: 0.3rem;
 }
@@ -135,4 +134,34 @@ button.menu {
 }
 button.menu img {
   padding: 0;
+}
+section.tasks article {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1rem 0 1rem;
+  border-radius: var(--round-corners);
+}
+.taskList {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.left img {
+  padding-right: 00.5rem;
+}
+.taskList article.addTask {
+  background-color: var(--dark-color);
+  border: 3px dashed var(--light--color);
+  text-align: center;
 }
