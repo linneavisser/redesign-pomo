@@ -9,8 +9,9 @@
   --bg--color: rgb(217, 85, 80);
   --dark-color: rgb(201, 79, 75);
   --light--color: rgb(224, 99, 95);
+  --lightest-color: rgb(243, 158, 155);
   --dark-font: rgb(66, 19, 17);
-  --light-font: rgb(56, 34, 33);
+  --light-font: rgb(83, 61, 60);
   --font: "Varela Round", sans-serif;
   --round-corners: 0.3rem;
 }
@@ -118,7 +119,7 @@ section.tasks {
   padding: 1rem;
 }
 section.working h4 {
-  color: rgb(243, 158, 155);
+  color: var(--lightest-color);
   font-size: 0.8rem;
   padding-bottom: 0.5rem;
 }
@@ -155,6 +156,7 @@ section.tasks article {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  font-weight: bold;
 }
 .left {
   display: flex;
@@ -162,13 +164,26 @@ section.tasks article {
   align-items: center;
 }
 .left img {
-  padding-right: 00.5rem;
+  padding-right: 0.5rem;
+  height: 1.4rem;
+}
+.secondTask .left {
+  color: rgb(173, 173, 173);
+  text-decoration: line-through;
+}
+.taskList .taskProgress {
+  color: rgb(173, 173, 173);
 }
 .taskList article.addTask {
   background-color: var(--dark-color);
   border: 3px dashed var(--light--color);
   justify-content: center;
-  color: rgb(243, 158, 155);
+  color: var(--lightest-color);
+}
+.taskList article.addTask img {
+  opacity: 0.3;
+  height: 1.2rem;
+  padding-right: 0.5rem;
 }
 .summation {
   display: flex;
@@ -177,7 +192,7 @@ section.tasks article {
   align-items: center;
   background-color: var(--light--color);
   border-top: 0.7px solid white;
-  color: rgb(243, 158, 155);
+  color: var(--lightest-color);
   padding: 1rem 0 1rem;
 }
 .summation .big {
@@ -196,21 +211,43 @@ section.tasks article {
 .textPage h1,
 .textPage section {
   grid-column: 2;
+  padding-bottom: 3rem;
 }
 .textPage h1,
 .textPage h2 {
   color: var(--dark-font);
   line-height: 2.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 .textPage h2::after {
   content: "";
   display: block;
   width: 2rem;
-  border-bottom: 4px solid var(--light--color);
-  opacity: 0.8;
-  padding-top: 0.8rem;
+  border-bottom: 4px solid var(--lightest-color);
+  padding-top: 1rem;
 }
 .textPage p {
   color: var(--light-font);
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+.textPage a {
+  color: var(--light--color);
+  font-weight: bold;
+}
+ol,
+ul {
+  line-height: 3rem;
+  color: var(--light-font);
+  font-size: 1.1rem;
+}
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  color: var(--lightest-color);
 }
